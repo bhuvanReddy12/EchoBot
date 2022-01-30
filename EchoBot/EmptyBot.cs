@@ -40,7 +40,7 @@ namespace EchoBot
             turnContext.Activity.RemoveRecipientMention();
             var text = turnContext.Activity.Text.Trim().ToLower();
 
-            var replyText = $"Hello, You said: {text}";
+            var replyText = $" You said: {text}";
             await turnContext.SendActivityAsync(MessageFactory.Text(replyText, replyText), cancellationToken);
         }
     }
